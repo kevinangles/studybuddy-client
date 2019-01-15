@@ -128,14 +128,14 @@
     .register-button {
       width: 150px;
       background-color: #fcbe32;
-      color: #3c4859;
+      color: white;
       font-size: 18px;
       font-weight: 600;
       border-radius: 5px;
     }
 
     a.register-button:hover {
-      color: white;
+      color: #3c4859;
     }
   }
 }

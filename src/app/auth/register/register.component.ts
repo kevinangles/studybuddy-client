@@ -21,11 +21,10 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.fb.group({
       first_name: ['', [Validators.required, Validators.maxLength(32)]],
       last_name: ['', [Validators.required, Validators.maxLength(32)]],
-      gender: ['', [Validators.required, Validators.maxLength(10)]],
-      phone: ['', [Validators.required, Validators.maxLength(10)]],
       email: ['', [Validators.required, Validators.email, Validators.maxLength(32)]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$'),
       Validators.maxLength(32)]],
+      phone: ['', [Validators.required, Validators.maxLength(10)]],
       references: this.fb.array([
         this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
       ])
@@ -40,20 +39,16 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get('last_name');
   }
 
-  get gender() {
-    return this.registerForm.get('gender');
-  }
-
-  get phone() {
-    return this.registerForm.get('phone');
-  }
-
   get email() {
     return this.registerForm.get('email');
   }
 
   get password() {
     return this.registerForm.get('password');
+  }
+
+  get phone() {
+    return this.registerForm.get('phone');
   }
 
   get referencesForm() {

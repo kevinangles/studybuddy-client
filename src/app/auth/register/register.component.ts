@@ -11,12 +11,6 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
 
-  majors = [
-    'Computer Science',
-    'Information Technology',
-    'Undeclared'
-  ];
-
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
       this.router.navigate(['/home']);
@@ -32,7 +26,6 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email, Validators.maxLength(32)]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$'),
       Validators.maxLength(32)]],
-      major: ['', [Validators.required, Validators.maxLength(32)]],
       references: this.fb.array([
         this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
       ])
@@ -61,10 +54,6 @@ export class RegisterComponent implements OnInit {
 
   get password() {
     return this.registerForm.get('password');
-  }
-
-  get major() {
-    return this.registerForm.get('major');
   }
 
   get referencesForm() {

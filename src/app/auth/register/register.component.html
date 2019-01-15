@@ -74,14 +74,6 @@
                 <input type="file" class="custom-file-input" id="upload" tabindex="8">
                 <label class="custom-file-label" for="customFile">Choose picture</label>
             </div> -->
-            <!-- Major dropdown -->
-            <div class="form-group major-textbox">
-              <select class="form-control" formControlName="major" tabindex="6">
-                <option value="" disabled selected> Select your major </option>
-                <option *ngFor="let major of majors" (ngValue)="major">{{ major }}</option>
-              </select>
-              <small *ngIf="major.invalid && major.touched" class="form-text error-message">Major is required</small>
-            </div>
             <!-- Reference number textbox -->
             <div class="form-group reference-form" formArrayName="references">
               <div class="form-group reference-textbox" *ngFor="let reference of referencesForm.controls; let i = index;">

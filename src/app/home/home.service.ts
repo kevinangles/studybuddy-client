@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class HomeService {
-  path = 'http://localhost:3000/home';
+  path = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 

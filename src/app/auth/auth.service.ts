@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-  path = 'http://localhost:3000/auth';
+  path = 'http://localhost:3000';
   TOKEN_KEY = 'token';
 
   constructor(private http: HttpClient) { }

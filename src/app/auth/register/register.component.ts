@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email, Validators.maxLength(32)]],
       password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$'),
       Validators.maxLength(32)]],
-      phone: ['', [Validators.required, Validators.maxLength(10)]],
+      phone_number: ['', [Validators.required, Validators.maxLength(10)]],
       references: this.fb.array([
         this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
       ])
@@ -47,8 +47,8 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get('password');
   }
 
-  get phone() {
-    return this.registerForm.get('phone');
+  get phone_number() {
+    return this.registerForm.get('phone_number');
   }
 
   get referencesForm() {

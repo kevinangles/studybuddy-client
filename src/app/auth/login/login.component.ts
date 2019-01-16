@@ -26,8 +26,5 @@ export class LoginComponent implements OnInit {
 
   post() {
     this.authService.loginUser(this.loginForm.value);
-    setTimeout(() => {
-      this.router.navigate(['/home']);
-    }, 500);
   }
 }

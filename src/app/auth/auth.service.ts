@@ -24,14 +24,14 @@ export class AuthService {
   registerUser(registerData) {
     this.http.post<any>(this.path + '/register', registerData).subscribe(res => {
       this.saveToken(res.token);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/welcome']);
     });
   }
 
   loginUser(loginData) {
     this.http.post<any>(this.path + '/login', loginData).subscribe(res => {
       this.saveToken(res.token);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/welcome']);
     });
   }
 }

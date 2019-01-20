@@ -44,7 +44,7 @@
             </div> -->
             <!-- Email textbox -->
             <div class="form-group">
-              <input type="email" formControlName="email" class="form-control" placeholder="Email" tabindex="4">
+              <input type="email" formControlName="email" class="form-control" placeholder="Email" tabindex="3">
               <small *ngIf="email.hasError('required') && email.touched" class="form-text error-message">Email is
                 required</small>
               <small *ngIf="email.hasError('maxlength') && email.touched" class="form-text error-message">Email must be
@@ -52,7 +52,7 @@
             </div>
             <!-- Password textbox -->
             <div class="form-group">
-              <input type="password" formControlName="password" class="form-control" placeholder="Password" tabindex="5">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password" tabindex="4">
               <small *ngIf="password.invalid && password.touched" class="form-text error-message">Password must contain
                 a
                 minimum of eight characters, including at least one uppercase letter, one lowercase letter,
@@ -66,7 +66,7 @@
                 <label class="custom-file-label" for="customFile">Choose picture</label>
             </div> -->
             <div class="form-group">
-              <input type="text" formControlName="phone_number" class="form-control" placeholder="Phone number" tabindex="3">
+              <input type="text" formControlName="phone_number" class="form-control" placeholder="Phone number" tabindex="5">
               <small *ngIf="phone_number.hasError('required') && phone_number.touched" class="form-text error-message">Phone number
                 is
                 required</small>
@@ -78,7 +78,7 @@
               <div class="form-group reference-textbox" *ngFor="let reference of referencesForm.controls; let i = index;">
                 <div class="input-group">
                   <input type="number" formControlName="{{i}}" class="form-control" placeholder="Reference number"
-                    tabindex="7">
+                    tabindex="6">
                   <div class="input-group-append">
                     <button type="button" class="btn btn-outline-secondary" (click)="removeReference(i)">-</button>
                   </div>
@@ -99,8 +99,7 @@
                 another reference number</button>
             </div>
             <!-- Register button -->
-            <button type="button" [disabled]="registerForm.invalid" (click)="post()" class="btn register-button btn-block"
-              tabindex="8">Register</button>
+            <button type="button" [disabled]="registerForm.invalid" (click)="post()" class="btn register-button btn-block" tabindex="7">Register</button>
           </form>
         </div>
       </div>

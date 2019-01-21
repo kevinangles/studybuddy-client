@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -25,9 +25,9 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$'),
       Validators.maxLength(32)]],
       phone_number: ['', [Validators.required, Validators.maxLength(10)]],
-      references: this.fb.array([
-        this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
-      ])
+      // references: this.fb.array([
+      //   this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
+      // ])
     });
   }
 
@@ -51,21 +51,21 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get('phone_number');
   }
 
-  get referencesForm() {
-    return this.registerForm.get('references') as FormArray;
-  }
+  // get referencesForm() {
+  //   return this.registerForm.get('references') as FormArray;
+  // }
 
-  addReference() {
-    if (this.referencesForm.length < 7) {
-      this.referencesForm.push(this.fb.control(null));
-    }
-  }
+  // addReference() {
+  //   if (this.referencesForm.length < 7) {
+  //     this.referencesForm.push(this.fb.control(null));
+  //   }
+  // }
 
-  removeReference(i) {
-    if (this.referencesForm.length > 1) {
-      this.referencesForm.removeAt(i);
-    }
-  }
+  // removeReference(i) {
+  //   if (this.referencesForm.length > 1) {
+  //     this.referencesForm.removeAt(i);
+  //   }
+  // }
 
   post() {
     this.authService.registerUser(this.registerForm.value);

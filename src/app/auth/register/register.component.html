@@ -74,7 +74,7 @@
                 must be 10 numbers or less</small>
             </div>
             <!-- Reference number textbox -->
-            <div class="form-group reference-form" formArrayName="references">
+            <!-- <div class="form-group reference-form" formArrayName="references">
               <div class="form-group reference-textbox" *ngFor="let reference of referencesForm.controls; let i = index;">
                 <div class="input-group">
                   <input type="number" formControlName="{{i}}" class="form-control" placeholder="Reference number"
@@ -88,16 +88,16 @@
                 <small *ngIf="referencesForm.at(i).hasError('maxlength') && referencesForm.at(i).touched" class="form-text error-message">Reference
                   numbers are 5 digits long</small>
               </div>
-            </div>
+            </div> -->
             <!-- Reference number help link -->
-            <div class="find-link">
+            <!-- <div class="find-link">
               <a href="https://login.fiu.edu/myfiu/" target="_blank">Find reference numbers</a>
-            </div>
+            </div> -->
             <!-- Add reference number button -->
-            <div class="add-button">
+            <!-- <div class="add-button">
               <button type="button" class="btn btn-outline-secondary btn-sm btn-block" (click)="addReference()">Add
                 another reference number</button>
-            </div>
+            </div> -->
             <!-- Register button -->
             <button type="button" [disabled]="registerForm.invalid" (click)="post()" class="btn register-button btn-block" tabindex="7">Register</button>
           </form>

@@ -6,7 +6,8 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' }
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

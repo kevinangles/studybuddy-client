@@ -100,6 +100,14 @@
             </div> -->
             <!-- Register button -->
             <button type="button" [disabled]="registerForm.invalid" (click)="post()" class="btn register-button btn-block" tabindex="7">Register</button>
+            <div class="separator">
+              <div> <hr> </div>
+              <div class="separator-text"> OR </div>
+              <div> <hr> </div>
+            </div>
+            <div class="create-account">
+              Already have an account? <a [routerLink]="['/login']">Log in.</a>
+            </div>
           </form>
         </div>
       </div>

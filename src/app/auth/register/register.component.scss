@@ -53,6 +53,31 @@
       color: #3c4859;
     }
   }
+
+  .separator {
+    width: 333px;
+    margin: 15px 0px 0px 0px;
+    text-align: center;
+    display: flex;
+    color: #8c939c;
+
+    div {
+      flex: 1;
+    }
+
+    .separator-text {
+      margin: 5px 0px 0px 0px;
+    }
+  }
+
+  .create-account {
+    width: 333px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #8c939c;
+    border-radius: 5px;
+  }
 }
 
 @media (min-width: 400px) {

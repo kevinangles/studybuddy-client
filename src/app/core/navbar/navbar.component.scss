@@ -1,10 +1,10 @@
 /* change the background color */
 .navbar-custom {
-  background-color: #3c4859;
+  background-color: #fcbe32;
 
   .navbar-brand {
     font-size: 22px;
-    color: #fcbe32;
+    color: white;
     font-weight: 600;
   }
 }
@@ -19,23 +19,7 @@
   color: white;
 }
 
-form {
-  button {
-    background-color: #fcbe32;
-    color: #3c4859;
-    font-weight: 600;
-  }
-
-  button:hover {
-    color: white;
-  }
-}
-
 @media (max-width: 991px) {
-  .form-inline {
-    display: none;
-  }
-
   .navbar-brand {
     margin: 0px auto;
   }

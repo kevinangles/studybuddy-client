@@ -8,6 +8,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ResultsComponent } from './results/results.component';
 import { ProfileComponent } from './profile/profile.component';
+import { VerifyComponent } from './verify/verify.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     HomeComponent,
     ResultsComponent,
-    ProfileComponent
+    ProfileComponent,
+    VerifyComponent
   ],
   providers: [
     HomeService
@@ -26,7 +28,8 @@ import { ProfileComponent } from './profile/profile.component';
   exports: [
     HomeComponent,
     ResultsComponent,
-    ProfileComponent
+    ProfileComponent,
+    VerifyComponent
   ]
 })
 export class HomeModule { }

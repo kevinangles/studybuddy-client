@@ -1,0 +1,41 @@
+.wrapper {
+  max-width: 500px;
+  background-color: white;
+  margin: 25px auto 0px auto;
+  padding: 0px 15px;
+  border-radius: 10px;
+  justify-content: center;
+
+  .title {
+    width: 100%;
+    color: #3c4859;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .home-button {
+    width: 125px;
+    height: 50px;
+    background-color: #fcbe32;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .home-button:hover {
+    color: #3c4859;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    .title {
+      margin: 30px 0px 0px 0px;
+    }
+  }
+}

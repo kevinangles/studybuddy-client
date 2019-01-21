@@ -7,6 +7,12 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
+  verifyEmail(hash) {
+    this.http.post<any>(this.path + '/verify/' + hash, hash).subscribe(res => {
+      // Do something with response
+    });
+  }
+
   getCourses() {
     return this.http.get(this.path + '/home');
   }

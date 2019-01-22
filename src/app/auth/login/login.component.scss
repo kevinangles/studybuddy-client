@@ -1,9 +1,6 @@
 .wrapper {
   max-width: 500px;
-  background-color: white;
-  margin: 25px auto 0px auto;
-  padding: 0px 15px;
-  border-radius: 10px;
+  margin: 25px auto 50px auto;
   justify-content: center;
 
   .title {
@@ -11,7 +8,7 @@
     color: #3c4859;
     font-size: 35px;
     font-weight: bold;
-    text-align: center;
+    padding: 0px 0px 0px 15px;
   }
 
   form {
@@ -74,6 +71,8 @@
   .wrapper {
     .title {
       margin: 30px 0px 0px 0px;
+      padding: 0px 0px 0px 0px;
+      text-align: center;
     }
   }
 }

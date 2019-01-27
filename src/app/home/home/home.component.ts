@@ -10,9 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private homeService: HomeService) { }
 
-  // courses;
-
   ngOnInit() {
-    // this.homeService.getCourses().subscribe(data => this.courses = data);
   }
 }

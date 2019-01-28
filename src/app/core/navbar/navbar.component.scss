@@ -19,8 +19,20 @@
   color: white;
 }
 
+.logout-button {
+  font-weight: 600;
+}
+
+.logout-button:hover {
+  color: #fcbe32;
+}
+
 @media (max-width: 991px) {
   .navbar-brand {
     margin: 0px auto;
+  }
+
+  .logout-button {
+    display: none;
   }
 }

@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+<nav class="navbar navbar-dark navbar-custom">
   <a class="navbar-brand" href="/welcome" *ngIf="!coreService.isAuthenticated"> Studybuddy </a>
   <a class="navbar-brand" href="/home" *ngIf="coreService.isAuthenticated"> Studybuddy </a>
+  <form class="form-inline" *ngIf="coreService.isAuthenticated">
+    <button class="btn btn-outline-light logout-button" (click)="coreService.logout()" [routerLink]="['/welcome']" type="submit" >Log out</button>
+  </form>
 </nav>

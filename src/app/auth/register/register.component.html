@@ -98,6 +98,9 @@
               <button type="button" class="btn btn-outline-secondary btn-sm btn-block" (click)="addReference()">Add
                 another reference number</button>
             </div> -->
+            <div class="alert alert-danger p-1" style="text-align: center;" role="alert" *ngIf="errorMessage">
+              {{errorMessage}}
+            </div>
             <!-- Register button -->
             <button type="submit" [disabled]="registerForm.invalid" (click)="post()" class="btn register-button btn-block" tabindex="7">Register</button>
             <div class="separator">

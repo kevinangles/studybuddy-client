@@ -21,11 +21,8 @@ export class AuthService {
     localStorage.setItem(this.TOKEN_KEY, token);
   }
 
-  registerUser(registerData) {
-    this.http.post<any>(this.path + '/register', registerData).subscribe(res => {
-      this.saveToken(res.token);
-      this.router.navigate(['/home']);
-    });
+  registerUser(registerData): Observable<any> {
+    return this.http.post<any>(this.path + '/register', registerData);
   }
 
   loginUser(loginData): Observable<any> {

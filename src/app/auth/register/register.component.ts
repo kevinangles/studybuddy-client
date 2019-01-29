@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
+  errorMessage = '';
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
@@ -68,6 +69,10 @@ export class RegisterComponent implements OnInit {
   // }
 
   post() {
-    this.authService.registerUser(this.registerForm.value);
+    this.authService.registerUser(this.registerForm.value).subscribe((data) => {
+      this.authService.saveToken(data.token);
+      this.router.navigate(['/home']);
+    }, error => { this.errorMessage = error.error.message; }
+    );
   }
 }

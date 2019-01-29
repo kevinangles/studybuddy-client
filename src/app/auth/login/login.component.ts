@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  errorMessage = '';  
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
@@ -25,6 +26,10 @@ export class LoginComponent implements OnInit {
   }
 
   post() {
-    this.authService.loginUser(this.loginForm.value);
+    this.authService.loginUser(this.loginForm.value).subscribe((data) => {
+      this.authService.saveToken(data.token);
+      this.router.navigate(['/home']);
+    }, error => { this.errorMessage = error.error.message; }
+    );
   }
 }

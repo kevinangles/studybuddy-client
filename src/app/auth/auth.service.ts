@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Observable } from 'rxjs';
 @Injectable()
 export class AuthService {
   path = 'http://localhost:3000';
@@ -28,10 +28,7 @@ export class AuthService {
     });
   }
 
-  loginUser(loginData) {
-    this.http.post<any>(this.path + '/login', loginData).subscribe(res => {
-      this.saveToken(res.token);
-      this.router.navigate(['/home']);
-    });
-  }
+  loginUser(loginData): Observable<any> {
+    return this.http.post<any>(this.path + '/login', loginData);
+  };
 }

@@ -6,10 +6,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HttpInterceptorService } from './httpInterceptor.service';
+
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { AuthGuard } from './guards/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,12 @@ import { AuthGuard } from './guards/auth.guard';
     AuthModule,
     HomeModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

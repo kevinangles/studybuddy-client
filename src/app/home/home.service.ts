@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class HomeService {
@@ -8,10 +9,8 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-  verifyEmail(hash) {
-    this.http.post<any>(this.path + '/verify/' + hash, hash).subscribe(res => {
-      // Do something with response
-    });
+  verifyEmail(hash): Observable<any> {
+    return this.http.post<any>(this.path + '/verify/' + hash, hash);
   }
 
   getCourses() {

@@ -11,7 +11,7 @@
   }
 
   .buttons {
-    margin: 15px 0px 0px 0px;
+    margin-top: 15px;
     justify-content: center;
   }
 
@@ -20,7 +20,7 @@
     height: 50px;
     font-size: 18px;
     font-weight: 600;
-    margin: 0px 25px 0px 0px;
+    margin-right: 25px;
   }
 
   .register-button:hover {
@@ -52,15 +52,12 @@
   background-color: #3c4859;
   padding: 40px 0px 60px 0px;
 
-  .wrapper {
-    max-width: 625px;
-    margin: 0px auto;
-  }
-
   .content {
+    max-width: 625px;
     font-size: 18px;
     color: white;
     text-align: center;
+    margin: 0px auto;
   }
 }
 
@@ -73,7 +70,6 @@
     color: #fcbe32;
     font-size: 30px;
     font-weight: 600;
-    margin: 0px 0px 20px 0px;
     justify-content: center;
   }
 
@@ -81,13 +77,14 @@
     color: white;
     font-size: 22px;
     font-weight: 600;
-    margin: 15px 0px 0px 0px;
+    margin-top: 15px;
     justify-content: center;
   }
 
   .step-image {
     height: 75px;
-    margin: 30px 0px 30px 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     justify-content: center;
   }
 
@@ -95,7 +92,7 @@
     color: #9facbd;
     font-size: 18px;
     font-weight: 400;
-    margin: 0px 0px 50px 0px;
+    margin-bottom: 50px;
     justify-content: center;
   }
 }
@@ -106,9 +103,9 @@
 
   .wrapper {
     height: 300px;
-    width: 500px;
+    max-width: 500px;
     background-color: white;
-    margin: 0px auto 0px auto;
+    margin: 0px auto;
     padding: 50px 0px 0px 0px;
     border-radius: 10px;
     text-align: center;
@@ -116,12 +113,12 @@
     h3 {
       color: #3c4859;
       font-weight: 600;
-      margin: 0px 0px 30px 0px;
+      margin-bottom: 30px;
     }
 
     .content {
       color: #9facbd;
-      margin: 0px 0px 30px 0px;
+      margin-bottom: 30px;
     }
 
     .register-button {
@@ -152,7 +149,7 @@
   }
 
   .copyright {
-    margin: 25px 0px 0px 0px;
+    margin-top: 25px;
     justify-content: center;
   }
 
@@ -180,15 +177,14 @@
 @media (max-width: 767px) {
   .who-we-are {
     .content {
-      width: 350px;
-      margin: 0px auto;
+      max-width: 350px;
       justify-content: center;
     }
   }
 
   .register {
     .wrapper {
-      width: 350px;
+      max-width: 350px;
     }
   }
 

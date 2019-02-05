@@ -6,6 +6,6 @@ Studybuddy is a community of students looking for classmates to study with. Regi
 <br/>
 👇 Check it out! 👇
 <br/>
-www.studybuddy.coffee
+https://www.studybuddy.coffee
 <br/>
 <br/>

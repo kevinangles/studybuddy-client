@@ -4,11 +4,11 @@
   justify-content: center;
 
   .title {
-    width: 100%;
+    width: 333px;
+    padding-left: 12px;
     color: #3c4859;
     font-size: 35px;
     font-weight: bold;
-    padding: 0px 0px 0px 15px;
   }
 
   form {
@@ -30,7 +30,7 @@
   .login-button {
     background-color: #fcbe32;
     color: white;
-    margin: 25px 0px 0px 0px;
+    margin-top: 25px;
     font-size: 18px;
     font-weight: 600;
   }
@@ -41,29 +41,29 @@
 
   .separator {
     width: 333px;
-    margin: 15px 0px 0px 0px;
+    margin-top: 15px;
+    color: #8c939c;
     text-align: center;
     display: flex;
-    color: #8c939c;
 
     div {
       flex: 1;
     }
 
     .separator-text {
-      margin: 5px 0px 0px 0px;
+      margin-top: 5px;
     }
   }
 
   .register-button {
     width: 333px;
+    margin-top: 15px;
     font-weight: 600;
-    margin: 15px 0px 0px 0px;
   }
 
   .create-account {
     width: 333px;
-    margin: 10px 0px 0px 0px;
+    margin-top: 10px;
     padding: 10px;
     text-align: center;
     border: 1px solid #8c939c;
@@ -72,11 +72,9 @@
 }
 
 @media (min-width: 992px) {
-  .wrapper {
-    .title {
-      margin: 30px 0px 0px 0px;
-      padding: 0px 0px 0px 0px;
-      text-align: center;
-    }
+  .title {
+    margin-top: 30px;
+    padding-left: 0px;
+    text-align: center;
   }
 }

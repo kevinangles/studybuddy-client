@@ -163,14 +163,17 @@
 }
 
 @media (min-width: 576px) {
-  .main {
-    background-image: none;
-  }
-
   .register {
     background-image: url("/assets/img/register-bg.svg");
     background-position: bottom;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    height: calc(100vh - 219px);
+    padding: 18vh 0px 0px 0px;
   }
 }
 

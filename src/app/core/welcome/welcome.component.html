@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="main row">
     <div class="col-md-12">
-      <div class="title row">
+      <div class="logo row">
         Studybuddy
       </div>
       <div class="buttons row">
-        <button type="button" class="btn btn-outline-light register-button" [routerLink]="['/register']">Register</button>
-        <button type="button" class="btn btn-outline-light login-button" [routerLink]="['/login']">Log in</button>
+        <button type="button" class="btn register-button" [routerLink]="['/register']">Register</button>
+        <button type="button" class="btn login-button" [routerLink]="['/login']">Log in</button>
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="how-to row">
-    <div class="col-md-12" style="margin-bottom: 35px;">
+    <div class="col-md-12">
       <div class="title row">
         How it works
       </div>
@@ -62,6 +62,37 @@
       </div>
     </div>
   </div>
+  <div class="benefits row">
+    <div class="col-md-12">
+      <div class="title row">
+        Benefits
+      </div>
+      <div class="subtitle-left">
+        The buddy system
+      </div>
+      <div class="content-left">
+        <!-- <i>"I get this, but not that. You get that, but not this."</i> <br> -->
+        If you don't get something, having someone clear up your confusion saves time that you would have spent trying
+        to figure out difficult concepts.
+      </div>
+      <div class="subtitle-right">
+        Avoid procrastinating
+      </div>
+      <div class="content-right">
+        <!-- <i>*Turns Do Not Disturb on*</i> <br> -->
+        Meet with a classmate to work on assignments and study for exams. Help each other stay focused while studying
+        and on-time with deadlines.
+      </div>
+      <div class="subtitle-left">
+        Share & discuss
+      </div>
+      <div class="content-left">
+        <!-- <i>"There's an even easier way, watch this."</i> <br> -->
+        Get a better understanding of the subject by sharing your point of view while hearing different perspectives on
+        the subject.
+      </div>
+    </div>
+  </div>
   <div class="register row">
     <div class="col-md-12">
       <div class="wrapper mb-5">
@@ -70,9 +101,7 @@
           Browse Florida International students<br>
           who are studying for your classes.
         </div>
-        <a [routerLink]="['/register']" class="btn btn-lg register-button" role="button">
-          Register
-        </a>
+        <button type="button" class="btn register-button" [routerLink]="['/register']">Register</button>
       </div>
     </div>
   </div>

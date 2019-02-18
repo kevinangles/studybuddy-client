@@ -1,13 +1,51 @@
+$primary-color: #fdbd00;
+$dark-gray: #3c4859;
+$medium-gray: #767e8a;
+$light-gray: #9da3ac;
+$title-font-size: 35px;
+
+.title {
+  color: $primary-color;
+  font-size: $title-font-size;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.button-light {
+  width: 125px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: $dark-gray;
+  border-color: $dark-gray;
+}
+
+.button-light:hover {
+  background-color: $dark-gray;
+  color: white;
+}
+
+.button-heavy {
+  width: 125px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  border-color: $primary-color;
+  background-color: $primary-color;
+  color: white;
+}
+
 .main {
   height: calc(100vh - 140px);
-  padding: 24vh 0px 0px 0px;
-  background-color: #fcbe32;
+  padding-top: 24vh;
 
-  .title {
-    color:white;
-    font-size: 13vmin;
+  .logo {
+    color: $primary-color;
     font-weight: bold;
     justify-content: center;
+    margin-bottom: 35px;
+    font-size: 13vmin;
   }
 
   .buttons {
@@ -16,65 +54,40 @@
   }
 
   .register-button {
-    width: 125px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 600;
+    @extend .button-light;
     margin-right: 25px;
   }
 
-  .register-button:hover {
-    color: #fcbe32;
-  }
-
   .login-button {
-    width: 125px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  .login-button:hover {
-    color: #fcbe32;
+    @extend .button-light;
   }
 }
 
 .learn-more {
-  background-color: #3c4859;
-  color: #fcbe32;
-  font-size: 30px;
-  font-weight: 600;
-  padding: 20px 0px 0px 0px;
-  justify-content: center;
+  @extend .title;
 }
 
 .who-we-are {
-  background-color: #3c4859;
-  padding: 40px 0px 60px 0px;
+  // margin-top: 40px;
+  margin-bottom: 120px;
 
   .content {
     max-width: 625px;
     font-size: 18px;
-    color: white;
+    color: $dark-gray;
     text-align: center;
-    margin: 0px auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .how-to {
-  background-color: #3c4859;
-  padding: 20px 0px 40px 0px;
+  margin-top: 20px;
+  margin-bottom: 100px;
   justify-content: center;
 
-  .title {
-    color: #fcbe32;
-    font-size: 30px;
-    font-weight: 600;
-    justify-content: center;
-  }
-
   .step-title {
-    color: white;
+    color: $dark-gray;
     font-size: 22px;
     font-weight: 600;
     margin-top: 15px;
@@ -89,7 +102,7 @@
   }
 
   .step-description {
-    color: #9facbd;
+    color: $light-gray;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 50px;
@@ -97,55 +110,97 @@
   }
 }
 
+.benefits {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .subtitle {
+    color: $dark-gray;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .content {
+    max-width: 500px;
+    color: $light-gray;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .subtitle-right {
+    @extend .subtitle;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .subtitle-left {
+    @extend .subtitle;
+    text-align: left;
+  }
+
+  .content-right {
+    @extend .content;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .content-left {
+    @extend .content;
+    text-align: left;
+  }
+
+  i {
+    color: $medium-gray;
+  }
+}
+
 .register {
-  background-color: #fcbe32;
-  padding: 125px 0px 77px 0px;
+  padding-bottom: 77px;
+  margin-top: 125px;
 
   .wrapper {
     height: 300px;
     max-width: 500px;
-    background-color: white;
-    margin: 0px auto;
-    padding: 50px 0px 0px 0px;
+    background: $dark-gray;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
     border-radius: 10px;
     text-align: center;
 
     h3 {
-      color: #3c4859;
+      color: $primary-color;
       font-weight: 600;
       margin-bottom: 30px;
     }
 
     .content {
-      color: #9facbd;
+      color: white;
       margin-bottom: 30px;
     }
 
     .register-button {
-      width: 150px;
-      background-color: #fcbe32;
-      color: white;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    a.register-button:hover {
-      color: #3c4859;
+      @extend .button-heavy;
     }
   }
 }
 
 .footer {
-  background-color: #3c4859;
+  background-color: $dark-gray;
   color: white;
-  padding: 50px 0px 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .col-md-4 {
-    padding: 0px 0px 0px 100px;
+    padding-left: 100px;
   }
 
   h3 {
-    color: #fcbe32;
+    color: $primary-color;
   }
 
   .copyright {
@@ -162,27 +217,29 @@
   }
 }
 
-@media (min-width: 576px) {
-  .register {
-    background-image: url("/assets/img/register-bg.svg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-}
-
 @media (max-width: 500px) {
   .main {
-    height: calc(100vh - 219px);
-    padding: 18vh 0px 0px 0px;
+    height: calc(100vh - 200px);
+    padding-top: 18vh;
   }
 }
 
 @media (max-width: 767px) {
+  .title {
+    font-size: 29px;
+  }
+
   .who-we-are {
+    margin-bottom: 75px;
+
     .content {
       max-width: 350px;
       justify-content: center;
     }
+  }
+
+  .how-to {
+    margin-bottom: 50px;
   }
 
   .register {
@@ -193,7 +250,7 @@
 
   .footer {
     .col-md-4 {
-      padding: 0px 0px 0px 50px;
+      padding-left: 50px;
     }
   }
 }

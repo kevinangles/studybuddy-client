@@ -115,6 +115,10 @@ $title-font-size: 35px;
   margin-right: auto;
   margin-left: auto;
 
+  .title {
+    margin-bottom: 40px;
+  }
+
   .subtitle {
     color: $dark-gray;
     font-size: 22px;
@@ -159,13 +163,12 @@ $title-font-size: 35px;
 }
 
 .register {
-  padding-bottom: 77px;
-  margin-top: 125px;
+  margin-top: 75px;
+  margin-bottom: 70px;
 
   .wrapper {
     height: 300px;
     max-width: 500px;
-    background: $dark-gray;
     margin-right: auto;
     margin-left: auto;
     padding-top: 50px;
@@ -173,13 +176,13 @@ $title-font-size: 35px;
     text-align: center;
 
     h3 {
-      color: $primary-color;
+      color: $dark-gray;
       font-weight: 600;
       margin-bottom: 30px;
     }
 
     .content {
-      color: white;
+      color: $light-gray;
       margin-bottom: 30px;
     }
 

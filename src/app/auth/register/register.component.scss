@@ -1,3 +1,8 @@
+$primary-color: #fdbd00;
+$dark-gray: #3c4859;
+$medium-gray: #767e8a;
+$light-gray: #9da3ac;
+
 .wrapper {
   max-width: 500px;
   margin: 0px auto 50px auto;
@@ -58,6 +63,7 @@
 
   .existing-account {
     width: 333px;
+    color: $dark-gray;
     margin-top: 10px;
     padding: 10px;
     text-align: center;

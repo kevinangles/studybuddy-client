@@ -1,74 +1,65 @@
 .wrapper {
   max-width: 500px;
-  margin: 25px auto 50px auto;
+  margin: 0px auto 50px auto;
   justify-content: center;
 
-  .title {
-    width: 333px;
-    padding-left: 12px;
-    color: #3c4859;
-    font-size: 35px;
-    font-weight: bold;
+}
+
+.title {
+  width: 333px;
+  padding-left: 12px;
+  color: #3c4859;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+form {
+  width: 333px;
+
+  a:hover {
+    text-decoration: underline;
   }
 
-  form {
-    width: 333px;
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .forgot-link {
-      text-align: right;
-    }
-
-    .alert-danger {
-      font-size: 14px;
-    }
+  .forgot-link {
+    text-align: right;
   }
 
-  .login-button {
-    background-color: #fcbe32;
-    color: white;
-    margin-top: 25px;
-    font-size: 18px;
-    font-weight: 600;
+  .alert-danger {
+    font-size: 14px;
+  }
+}
+
+.login-button {
+  background-color: #fdbd00;
+  color: white;
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.separator {
+  width: 333px;
+  margin-top: 15px;
+  color: #8c939c;
+  text-align: center;
+  display: flex;
+
+  div {
+    flex: 1;
   }
 
-  .login-button:hover {
-    color: #3c4859;
+  .separator-text {
+    margin-top: 5px;
   }
+}
 
-  .separator {
-    width: 333px;
-    margin-top: 15px;
-    color: #8c939c;
-    text-align: center;
-    display: flex;
-
-    div {
-      flex: 1;
-    }
-
-    .separator-text {
-      margin-top: 5px;
-    }
-  }
-
-  .register-button {
-    width: 333px;
-    margin-top: 15px;
-    font-weight: 600;
-  }
-
-  .create-account {
-    width: 333px;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #8c939c;
-    border-radius: 5px;
-  }
+.create-account {
+  width: 333px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #8c939c;
+  border-radius: 5px;
 }
 
 @media (min-width: 992px) {
@@ -76,5 +67,15 @@
     margin-top: 30px;
     padding-left: 0px;
     text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    display: none;
+  }
+
+  .title-separator {
+    display: none;
   }
 }

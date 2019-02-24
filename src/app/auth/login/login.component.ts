@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   errorMessage = '';  
+  navTitle = 'Log in';
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
@@ -23,6 +24,7 @@ export class LoginComponent implements OnInit {
       email: '',
       password: ''
     });
+    this.authService.setNavTitle(this.navTitle);
   }
 
   post() {

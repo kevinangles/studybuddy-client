@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   errorMessage = '';
+  navTitle = 'Register';
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
@@ -30,6 +31,7 @@ export class RegisterComponent implements OnInit {
       //   this.fb.control(null, [Validators.required, Validators.minLength(5), Validators.maxLength(5)])
       // ])
     });
+    this.authService.setNavTitle(this.navTitle);
   }
 
   get first_name() {

@@ -8,6 +8,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   path = environment.path;
   TOKEN_KEY = 'token';
+  navTitle = 'Studybuddy';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -29,5 +30,15 @@ export class AuthService {
 
   loginUser(loginData): Observable<any> {
     return this.http.post<any>(this.path + '/login', loginData);
-  };
+  }
+
+  getNavTitle() {
+    let title = this.navTitle;
+    // this.navTitle = 'Studybuddy';
+    return title;
+  } 
+
+  setNavTitle(title) {
+    this.navTitle = title;
+  }
 }

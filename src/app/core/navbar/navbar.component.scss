@@ -3,9 +3,7 @@ $dark-gray: #3c4859;
 $medium-gray: #767e8a;
 $light-gray: #9da3ac;
 
-/* change the background color */
 .navbar-custom {
-  // background-color: #fcbe32;
   min-height: 56px;
 
   .brand-container {
@@ -24,6 +22,10 @@ $light-gray: #9da3ac;
     padding: 0px;
     z-index: -1;
   }
+}
+
+.navbar-collapse {
+  padding-top: 12.5px;
 }
 
 .nav-link {

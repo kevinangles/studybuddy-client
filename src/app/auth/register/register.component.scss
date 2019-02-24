@@ -1,6 +1,6 @@
 .wrapper {
   max-width: 500px;
-  margin: 25px auto 50px auto;
+  margin: 0px auto 50px auto;
   justify-content: center;
 
   .title {
@@ -40,10 +40,6 @@
     font-weight: 600;
   }
 
-  .register-button:hover {
-    color: #3c4859;
-  }
-
   .separator {
     width: 333px;
     margin-top: 15px;
@@ -60,7 +56,7 @@
     }
   }
 
-  .create-account {
+  .existing-account {
     width: 333px;
     margin-top: 10px;
     padding: 10px;
@@ -87,5 +83,15 @@
       padding-right: 15px;
       padding-left: 7.5px;
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    display: none;
+  }
+
+  .title-separator {
+    display: none;
   }
 }

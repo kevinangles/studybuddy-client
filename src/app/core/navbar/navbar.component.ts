@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   navbarOpen = false;
 
   // links = [
-  //   { 'name': 'Home', 'route': '/home', 'authenticated': this.coreService.isAuthenticated },
+  //   { 'name': 'Search', 'route': '/search', 'authenticated': this.coreService.isAuthenticated },
   //   { 'name': 'Register', 'route': '/register', 'authenticated': !this.coreService.isAuthenticated },
   //   { 'name': 'Log in', 'route': '/login', 'authenticated': !this.coreService.isAuthenticated }
   // ]

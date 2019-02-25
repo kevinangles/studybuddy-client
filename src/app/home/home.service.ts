@@ -14,7 +14,7 @@ export class HomeService {
   }
 
   getCourses() {
-    return this.http.get(this.path + '/home');
+    return this.http.get(this.path + '/search');
   }
 
   getProfile(id) {

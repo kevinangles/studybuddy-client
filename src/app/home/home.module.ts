@@ -5,10 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeService } from '.././home/home.service';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home/home.component';
 import { ResultsComponent } from './results/results.component';
 import { ProfileComponent } from './profile/profile.component';
 import { VerifyComponent } from './verify/verify.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
@@ -17,16 +17,15 @@ import { VerifyComponent } from './verify/verify.component';
     HttpClientModule,
   ],
   declarations: [
-    HomeComponent,
     ResultsComponent,
     ProfileComponent,
-    VerifyComponent
+    VerifyComponent,
+    SearchComponent
   ],
   providers: [
     HomeService
   ],
   exports: [
-    HomeComponent,
     ResultsComponent,
     ProfileComponent,
     VerifyComponent

@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     if (this.authService.isAuthenticated) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/search']);
     }
   }
 
@@ -73,7 +73,7 @@ export class RegisterComponent implements OnInit {
   post() {
     this.authService.registerUser(this.registerForm.value).subscribe((data) => {
       this.authService.saveToken(data.token);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/search']);
     }, error => { this.errorMessage = error.error.message; }
     );
   }

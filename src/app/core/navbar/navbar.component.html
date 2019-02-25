@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/home" (click)="toggleNavbar()" *ngIf="coreService.isAuthenticated">
+        <a class="nav-link" routerLink="/search" (click)="toggleNavbar()" *ngIf="coreService.isAuthenticated">
           Search </a>
       </li>
       <li class="nav-item">

@@ -12,12 +12,11 @@ export class NavbarComponent implements OnInit {
   title = 'Studybuddy';
   navbarOpen = false;
 
-  links = [
-    { 'name': 'Home', 'route': '/home', 'authenticated': this.coreService.isAuthenticated },
-    { 'name': 'Register', 'route': '/register', 'authenticated': !this.coreService.isAuthenticated },
-    { 'name': 'Log in', 'route': '/login', 'authenticated': !this.coreService.isAuthenticated },
-    { 'name': 'Log out', 'route': '/login', 'authenticated': this.coreService.isAuthenticated }
-  ]
+  // links = [
+  //   { 'name': 'Home', 'route': '/home', 'authenticated': this.coreService.isAuthenticated },
+  //   { 'name': 'Register', 'route': '/register', 'authenticated': !this.coreService.isAuthenticated },
+  //   { 'name': 'Log in', 'route': '/login', 'authenticated': !this.coreService.isAuthenticated }
+  // ]
 
   constructor(public coreService: CoreService, private router: Router, private authService: AuthService) {
   }

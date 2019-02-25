@@ -10,9 +10,17 @@
   </div>
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" *ngFor="let link of links">
-        <a class="nav-link" routerLink="{{ link.route }}" (click)="toggleNavbar()" *ngIf="link.authenticated">
-          {{ link.name }} </a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" (click)="toggleNavbar()" *ngIf="coreService.isAuthenticated">
+          Search </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" (click)="toggleNavbar()" *ngIf="!coreService.isAuthenticated">
+          Login </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register" (click)="toggleNavbar()" *ngIf="!coreService.isAuthenticated">
+          Register </a>
       </li>
       <div *ngIf="coreService.isAuthenticated">
         <div class="dropdown-divider"></div>

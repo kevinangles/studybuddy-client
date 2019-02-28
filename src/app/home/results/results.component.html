@@ -20,8 +20,8 @@
           <div class="col-7">
             <div class="option-title">Professor</div>
             <hr class="option-hr">
-            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor_data.first_name }}
-              {{ course.professor_data.last_name }}</a>
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor.first_name }}
+              {{ course.professor.last_name }}</a>
           </div>
           <div class="col-5">
             <div class="option-title">Reference #</div>
@@ -38,8 +38,8 @@
           <div class="col-7">
             <div class="option-title">Professor</div>
             <hr class="option-hr">
-            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor_data.first_name }}
-              {{ course.professor_data.last_name }}</a>
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor.first_name }}
+              {{ course.professor.last_name }}</a>
           </div>
           <div class="col-5">
             <div class="option-title">Reference #</div>
@@ -59,7 +59,7 @@
             {{ student.first_name}} {{student.last_name }}
           </div>
           <div class="professor-name">
-            Prof. {{ course.professor_data.first_name }} {{ course.professor_data.last_name }}
+            Prof. {{ course.professor.first_name }} {{ course.professor.last_name }}
           </div>
         </div>
       </div>

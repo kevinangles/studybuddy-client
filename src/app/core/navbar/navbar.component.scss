@@ -4,14 +4,15 @@ $medium-gray: #767e8a;
 $light-gray: #9da3ac;
 
 .navbar-custom {
-  min-height: 56px;
+  min-height: 50px;
 
   .brand-container {
     position: absolute; 
-    top: 11px; 
-    width: 100%; 
-    height: 56px; 
+    top: 9px;
     z-index: -1;
+    width: 100%;
+    left: 0px; 
+    text-align: center;
   }
 
   .navbar-brand {
@@ -20,12 +21,7 @@ $light-gray: #9da3ac;
     font-weight: 600;
     margin-right: 0px;
     padding: 0px;
-    z-index: -1;
   }
-}
-
-.navbar-collapse {
-  padding-top: 12.5px;
 }
 
 .nav-link {
@@ -48,6 +44,12 @@ li:first-child a {
   color: $dark-gray;
 }
 
+.navbar-toggler {
+  border-color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 .logout-button {
   font-weight: 600;
 }
@@ -57,31 +59,10 @@ li:first-child a {
 }
 
 @media (max-width: 991px) {
-  .brand-container {
-    left: 0px; 
-    text-align: center;
-  }
-
-  .brand-mobile {
-    display: none;
-  }
-
-  .navbar {
-    margin-bottom: 3rem;
-  }
-
-  .logout-button {
-    display: none;
-  }
 }
 
 @media (min-width: 992px) {
-  .brand-container {
-    top: 11px; 
-    left: 90px; 
-  }
-
-  .brand-desktop {
+  .brand-mobile {
     display: none;
   }
 }

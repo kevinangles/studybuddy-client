@@ -1,30 +1,29 @@
 <nav class="navbar navbar-light navbar-custom shadow-sm" *ngIf="showNav()">
-  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-dropdown"
+    aria-expanded="false">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="brand-container brand-mobile">
-    <a [routerLink]="['/welcome']" class="navbar-brand"> Studybuddy </a>
-  </div>
-  <div class="brand-container brand-desktop">
     <a [routerLink]="['/welcome']" class="navbar-brand"> {{ title }} </a>
   </div>
-  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+  <div class="collapse navbar-collapse" id="navbar-dropdown">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/search" (click)="toggleNavbar()" *ngIf="coreService.isAuthenticated">
-          Search </a>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/search"
+          *ngIf="coreService.isAuthenticated">Search</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" (click)="toggleNavbar()" *ngIf="!coreService.isAuthenticated">
-          Login </a>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/login"
+          *ngIf="!coreService.isAuthenticated">Login</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/register" (click)="toggleNavbar()" *ngIf="!coreService.isAuthenticated">
-          Register </a>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/register"
+          *ngIf="!coreService.isAuthenticated">Register</a>
       </li>
       <div *ngIf="coreService.isAuthenticated">
         <div class="dropdown-divider"></div>
-        <a class="nav-link" (click)="coreService.logout()" routerLink="/login">Log out</a>
+        <a class="nav-link" (click)="coreService.logout()"
+          routerLink="/login">Log out</a>
       </div>
     </ul>
   </div>

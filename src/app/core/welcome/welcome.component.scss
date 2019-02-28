@@ -2,36 +2,29 @@ $primary-color: #fdbd00;
 $dark-gray: #3c4859;
 $medium-gray: #767e8a;
 $light-gray: #9da3ac;
-$title-font-size: 35px;
 
 .title {
   color: $primary-color;
-  font-size: $title-font-size;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 500;
   justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
 
 .button-light {
   width: 125px;
   height: 50px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: $dark-gray;
   border-color: $dark-gray;
-}
-
-.button-light:hover {
-  background-color: $dark-gray;
-  color: white;
 }
 
 .button-heavy {
   width: 125px;
   height: 50px;
   font-size: 18px;
-  font-weight: 600;
-  border-color: $primary-color;
+  font-weight: 500;
   background-color: $primary-color;
   color: white;
 }
@@ -68,7 +61,6 @@ $title-font-size: 35px;
 }
 
 .who-we-are {
-  // margin-top: 40px;
   margin-bottom: 120px;
 
   .content {
@@ -86,14 +78,6 @@ $title-font-size: 35px;
   margin-bottom: 100px;
   justify-content: center;
 
-  .step-title {
-    color: $dark-gray;
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 15px;
-    justify-content: center;
-  }
-
   .step-image {
     height: 75px;
     margin-top: 30px;
@@ -101,10 +85,17 @@ $title-font-size: 35px;
     justify-content: center;
   }
 
+  .step-title {
+    color: $dark-gray;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
   .step-description {
     color: $light-gray;
     font-size: 18px;
-    font-weight: 400;
     margin-bottom: 50px;
     justify-content: center;
   }
@@ -115,22 +106,10 @@ $title-font-size: 35px;
   margin-right: auto;
   margin-left: auto;
 
-  .title {
-    margin-bottom: 40px;
-  }
-
   .subtitle {
     color: $dark-gray;
     font-size: 22px;
-    font-weight: 600;
-  }
-
-  .content {
-    max-width: 500px;
-    color: $light-gray;
-    font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 50px;
+    font-weight: 500;
   }
 
   .subtitle-right {
@@ -143,6 +122,13 @@ $title-font-size: 35px;
   .subtitle-left {
     @extend .subtitle;
     text-align: left;
+  }
+
+  .content {
+    max-width: 500px;
+    color: $light-gray;
+    font-size: 18px;
+    margin-bottom: 50px;
   }
 
   .content-right {
@@ -164,7 +150,7 @@ $title-font-size: 35px;
 
 .register {
   margin-top: 75px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 
   .wrapper {
     height: 300px;
@@ -177,17 +163,22 @@ $title-font-size: 35px;
 
     h3 {
       color: $dark-gray;
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 30px;
     }
 
     .content {
       color: $light-gray;
       margin-bottom: 30px;
+      font-size: 18px;
     }
 
     .register-button {
-      @extend .button-heavy;
+      height: 50px;
+      font-size: 18px;
+      border-color: $primary-color;
+      background-color: $primary-color;
+      color: white;
     }
   }
 }

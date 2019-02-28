@@ -3,12 +3,12 @@
     <div class="title">
       Search
     </div>
-    <div class="input-group mb-3 search-box">
-      <input type="text" class="form-control" placeholder="Enter a course code">
+    <form [formGroup]="searchForm" class="input-group mb-3 search-box">
+      <input type="text" class="form-control" placeholder="Enter a course code" formControlName="code" tabindex="1">
       <div class="input-group-append">
-        <button class="btn search-button" type="button">Search</button>
+        <button class="btn search-button" type="button" (click)="post()" tabindex="2"><i class="fas fa-search"></i></button>
       </div>
-    </div>
+    </form>
     <!-- <div class="search-hint">
         Search for a reference number "81669", a course code "COP3530", or a course name "Data Structures"
       </div> -->

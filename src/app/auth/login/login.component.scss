@@ -2,23 +2,26 @@ $primary-color: #fdbd00;
 $dark-gray: #3c4859;
 $medium-gray: #767e8a;
 $light-gray: #9da3ac;
+$form-width: 333px;
 
 .wrapper {
-  max-width: 500px;
-  margin: 0px auto 50px auto;
-  justify-content: center;
+  width: $form-width;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  text-align: center;
 }
 
 .title {
-  width: 333px;
-  padding-left: 12px;
-  color: #3c4859;
+  width: $form-width;
+  color: $dark-gray;
   font-size: 35px;
   font-weight: bold;
+  margin-top: 30px;
 }
 
 form {
-  width: 333px;
+  width: $form-width;
 
   a:hover {
     text-decoration: underline;
@@ -34,7 +37,7 @@ form {
 }
 
 .login-button {
-  background-color: #fdbd00;
+  background-color: $primary-color;
   color: white;
   margin-top: 25px;
   font-size: 18px;
@@ -42,10 +45,9 @@ form {
 }
 
 .separator {
-  width: 333px;
+  width: $form-width;
   margin-top: 15px;
-  color: #8c939c;
-  text-align: center;
+  color: $light-gray;
   display: flex;
 
   div {
@@ -58,29 +60,23 @@ form {
 }
 
 .create-account {
-  width: 333px;
+  width: $form-width;
   color: $dark-gray;
   margin-top: 10px;
   padding: 10px;
-  text-align: center;
-  border: 1px solid #8c939c;
+  border: 1px solid $light-gray;
   border-radius: 5px;
 }
 
 @media (min-width: 992px) {
-  .title {
-    margin-top: 30px;
-    padding-left: 0px;
-    text-align: center;
-  }
 }
 
-@media (max-width: 992px) {
-  .title {
+@media (max-width: 991px) {
+  .title, .title-separator {
     display: none;
   }
 
-  .title-separator {
-    display: none;
+  form {
+    margin-top: 3rem;
   }
 }

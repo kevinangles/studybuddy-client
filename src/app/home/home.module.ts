@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { HomeService } from '.././home/home.service';
@@ -10,11 +11,17 @@ import { ProfileComponent } from './profile/profile.component';
 import { VerifyComponent } from './verify/verify.component';
 import { SearchComponent } from './search/search.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     ResultsComponent,
@@ -28,7 +35,8 @@ import { SearchComponent } from './search/search.component';
   exports: [
     ResultsComponent,
     ProfileComponent,
-    VerifyComponent
+    VerifyComponent,
+    SearchComponent
   ]
 })
 export class HomeModule { }

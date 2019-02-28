@@ -1,38 +1,66 @@
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="wrapper">
-      <div class="title">
-        Course Name
-      </div>
-      <hr>
-      Values: {{sections | json }}
-      <div *ngFor="let section of sections">
-        <div class="media" *ngFor="let student of section.students" [routerLink]="['/profile', student._id]">
-          <img class="profile-picture" src="assets/img/profile-picture.svg">
-          <div class="media-body">
-            <h5 class="user-name">{{ student?.first_name }} {{ student?.last_name }}</h5>
-            <span class="professor-name">Prof. {{ section?.professor }} </span><br>
+<div class="container-fluid">
+  <div class="wrapper">
+    <div class="title"> {{ courseName }} </div>
+    <div class="option-container">
+      <!-- Filter button -->
+      <button class="btn btn-sm option-button" type="button" data-toggle="collapse" data-target="#filter"
+        aria-expanded="false">
+        <i class="fas fa-filter option-icon"></i>Filter
+      </button>
+      <!-- Sort button -->
+      <button class="btn btn-sm option-button" type="button" data-toggle="collapse" data-target="#sort"
+        aria-expanded="false">
+        <i class="fas fa-sort-amount-down option-icon"></i>Sort
+      </button>
+    </div>
+    <!-- Filter dropdown -->
+    <div class="collapse" id="filter">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-7">
+            <div class="option-title">Professor</div>
+            <hr class="option-hr">
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor_data.first_name }}
+              {{ course.professor_data.last_name }}</a>
+          </div>
+          <div class="col-5">
+            <div class="option-title">Reference #</div>
+            <hr class="option-hr">
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.reference }}</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div> -->
-
-<div class="container-fluid">
-  <div class="wrapper">
-    <div class="title row">
-      Course Name
+    <!-- Sort dropdown -->
+    <div class="collapse" id="sort">
+      <div class="card card-body">
+        <div class="row">
+          <div class="col-7">
+            <div class="option-title">Professor</div>
+            <hr class="option-hr">
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.professor_data.first_name }}
+              {{ course.professor_data.last_name }}</a>
+          </div>
+          <div class="col-5">
+            <div class="option-title">Reference #</div>
+            <hr class="option-hr">
+            <a class="options" *ngFor="let course of courses" href="#">{{ course.reference }}</a>
+          </div>
+        </div>
+      </div>
     </div>
     <hr>
-    <!-- Values: {{sections | json }} -->
-    <div *ngFor="let section of sections">
-      <div class="media" *ngFor="let student of section.students" [routerLink]="['/profile', student._id]">
-        <img class="profile-picture" src="assets/img/profile-picture.svg">
+    <!-- Results -->
+    <div *ngFor="let course of courses">
+      <div class="media" *ngFor="let student of course.students">
+        <img class="profile-picture" src="https://picsum.photos/200/300/?random">
         <div class="media-body">
-          <h5 class="user-name">{{ student?.first_name }} {{ student?.last_name }}</h5>
-          <span class="professor-name">Prof. {{ section?.professor }} </span><br>
-          <!-- Type: {{ section?.type }} -->
+          <div class="user-name">
+            {{ student.first_name}} {{student.last_name }}
+          </div>
+          <div class="professor-name">
+            Prof. {{ course.professor_data.first_name }} {{ course.professor_data.last_name }}
+          </div>
         </div>
       </div>
     </div>

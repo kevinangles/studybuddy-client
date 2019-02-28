@@ -1,48 +1,105 @@
+$primary-color: #fdbd00;
+$dark-gray: #3c4859;
+$medium-gray: #767e8a;
+$light-gray: #9da3ac;
+
 .wrapper {
-  max-width: 500px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
 
+.title {
+  color: $dark-gray;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.option-container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.option-button {
+  background: white;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.option-icon {
+  margin-right: 8px;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.option-title {
+  font-weight: 500;
+}
+
+.option-hr {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.options {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  color: $dark-gray;
+}
+
+.options:hover {
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.media {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.user-name {
+  color: $dark-gray;
+  font-weight: 500;
+}
+
+.professor-name {
+  color: $light-gray;
+}
+
+.profile-picture {
+  width: 55px;
+  height: 55px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+@media (min-width: 992px) {
   .title {
-    color: #3c4859;
-    font-size: 35px;
-    font-weight: bold;
-    margin: 25px 0px 0px 0px;
+    font-size: 20px;
+    margin-top: 34px;
   }
 
-  hr {
-    margin: 10px auto 25px auto;
-  }
-
-  .media {
-    background-color: #3c4859;
-    color: white;
-    padding: 25px;
-    margin: 0px 0px 15px 0px;
-    padding: 15px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-
-    .user-name {
-      color: #fcbe32;
-    }
-
-    .professor-name {
-      color: white;
-    }
-  }
-
-  .profile-picture {
-    width: 50px;
-    margin-right: 25px;
+  .subtitle {
+    font-size: 20px;
   }
 }
 
-@media (min-width: 576px) {
-  .wrapper {
-    margin: 0px auto;
-
-    .media {
-      margin: 0px auto 15px auto;
-    }
-  }
+@media (max-width: 991px) {
 }
-

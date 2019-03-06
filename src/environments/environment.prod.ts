@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  path: 'https://sbserver.appspot.com',
+  path: 'https://studybuddy-api.appspot.com',
 };

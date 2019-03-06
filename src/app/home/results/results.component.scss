@@ -40,6 +40,10 @@ $light-gray: #9da3ac;
   margin-top: 20px;
 }
 
+.option-section {
+  margin-bottom: 15px;
+}
+
 .option-title {
   font-weight: 500;
 }
@@ -58,6 +62,11 @@ $light-gray: #9da3ac;
 
 .options:hover {
   text-decoration: none;
+}
+
+.option-label {
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 hr {

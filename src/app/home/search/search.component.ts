@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '.././home.service';
 import { AuthService } from '../../auth/auth.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   searchForm: FormGroup;
-  navTitle = 'Search';
+  navTitle: string = 'Search';
+  code: string = '';
 
-  constructor(private fb: FormBuilder, private homeService: HomeService, private authService: AuthService, private router: Router) { }
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.searchForm = this.fb.group({
@@ -23,8 +23,7 @@ export class SearchComponent implements OnInit {
   }
 
   post() {
-    this.router.navigate(['/results/', this.searchForm.value.code])
-    // this.homeService.searchByCode(this.searchForm.value.code);
+    this.code = this.searchForm.value.code.toUpperCase();
+    this.router.navigate(['/results/', this.code])
   }
-
 }

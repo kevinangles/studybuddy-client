@@ -98,6 +98,66 @@ hr {
   margin-right: 16px;
   border-radius: 50%;
 }
+.modal-content {
+  border: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-title {
+  color: $dark-gray;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.modal-profile-picture {
+  text-align: center;
+  margin-bottom: 12px;
+
+  img {
+    height: 75px;
+  }
+}
+
+.modal-name {
+  color: $dark-gray;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.modal-rating {
+  display: block; 
+  color: $light-gray;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modal-details {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+ 
+.modal-details-title {
+  font-weight: 500;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.request-button {
+  background-color: #fcbe32;
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
 
 @media (min-width: 992px) {
   .title {

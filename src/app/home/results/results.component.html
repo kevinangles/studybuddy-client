@@ -57,14 +57,53 @@
     <hr>
     <!-- Results -->
     <div *ngFor="let course of filteredCourses">
-      <div class="media" *ngFor="let student of course.students">
-        <img class="profile-picture" src="https://picsum.photos/200/300/?random">
+      <div class="media" *ngFor="let student of course.students" data-toggle="modal" data-target="#profile-modal" (click)="profile = student; selectedCourse = course">
+        <img class="profile-picture" src="../../../assets/img/profile-picture.svg">
         <div class="media-body">
           <div class="user-name">
             {{ student.first_name}} {{student.last_name }}
           </div>
           <div class="professor-name">
             Prof. {{ course.professor.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="profile-modal"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              {{courseCode}} - {{courseName}}
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-profile-picture">
+              <img src="../../../assets/img/profile-picture.svg">
+            </div>
+            <div class="modal-name">
+              {{profile.first_name}} {{profile.last_name}}
+            </div>
+            <div class="modal-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="modal-details">
+              <div class="modal-details-title">Details</div>
+              <div>I am able to meet on week days in the afternoon.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-block request-button">Send request</button>
           </div>
         </div>
       </div>

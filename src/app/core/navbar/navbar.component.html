@@ -16,12 +16,16 @@
           *ngIf="coreService.isAuthenticated">Search</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/register"
+          *ngIf="!coreService.isAuthenticated">Register</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
         <a class="nav-link" routerLink="/login"
           *ngIf="!coreService.isAuthenticated">Login</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/register"
-          *ngIf="!coreService.isAuthenticated">Register</a>
+        <a class="nav-link" routerLink="/login"
+          *ngIf="coreService.isAuthenticated">Account</a>
       </li>
       <div *ngIf="coreService.isAuthenticated" data-toggle="collapse" data-target="#navbar-dropdown">
         <div class="dropdown-divider"></div>

@@ -17,7 +17,7 @@ $light-gray: #9da3ac;
 
   .navbar-brand {
     font-size: 22px;
-    color: #fdbd00;
+    color: $primary-color;
     font-weight: 600;
     margin-right: 0px;
     padding: 0px;
@@ -55,10 +55,7 @@ li:first-child a {
 }
 
 .logout-button:hover {
-  color: #fcbe32;
-}
-
-@media (max-width: 991px) {
+  color: $primary-color;
 }
 
 @media (min-width: 992px) {
@@ -66,3 +63,10 @@ li:first-child a {
     display: none;
   }
 }
+
+@media (max-width: 991px) {
+  .brand-desktop {
+    display: none;
+  }
+}
+

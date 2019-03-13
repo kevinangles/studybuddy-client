@@ -50,10 +50,15 @@ export class ResultsComponent implements OnInit {
     return uniqueNames;
   }
 
+  // Returns an array with reference numbers that have students in them
   getReferences(courses: any[]) {
     let references: number[] = [];
 
-    references = courses.map(course => course.reference);
+    for (let course of courses) {
+      if(course.students.length) {
+        references.push(course.reference);
+      }
+    }
 
     return references;
   }

@@ -56,19 +56,29 @@
     </div>
     <hr>
     <!-- Results -->
-    <div *ngFor="let course of filteredCourses">
-      <div class="media" *ngFor="let student of course.students" data-toggle="modal" data-target="#profile-modal"
-        (click)="profile = student; selectedCourse = course">
-        <img class="profile-picture" src="../../../assets/img/profile-picture.svg">
-        <div class="media-body">
-          <div class="user-name">
-            {{ student.first_name }} {{student.last_name }}
-          </div>
-          <div class="professor-name">
-            Prof. {{ course.professor.name }}
+    <!-- {{ filteredCourses | json}} -->
+    <!-- {{ resultCount }} -->
+    <div>
+      <div *ngFor="let course of filteredCourses">
+        <div class="media" *ngFor="let student of course.students" data-toggle="modal" data-target="#profile-modal"
+          (click)="profile = student; selectedCourse = course">
+          <img class="profile-picture" src="../../../assets/img/profile-picture.svg">
+          <div class="media-body">
+            <div class="user-name">
+              {{ student.first_name }} {{student.last_name }}
+            </div>
+            <div class="professor-name">
+              Prof. {{ course.professor.name }}
+            </div>
           </div>
         </div>
       </div>
+      <div class="no-results" *ngIf="!resultCount">
+        <div class="frown-icon"><i class="far fa-frown-open fa-5x"></i></div>
+        <div class="no-results-title">No results for <span>{{ courseCode }}</span></div>
+        <div><a href="#">Get notified</a> when students are available</div>
+      </div>
+
     </div>
 
     <!-- Modal -->

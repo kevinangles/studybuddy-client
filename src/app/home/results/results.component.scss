@@ -98,6 +98,26 @@ hr {
   margin-right: 16px;
   border-radius: 50%;
 }
+
+.no-results {
+  color: $dark-gray;
+  text-align: center;
+}
+
+.no-results-title {
+  font-size: 18px;
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.frown-icon {
+  color: $light-gray;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 .modal-content {
   border: none;
 }

@@ -7,20 +7,15 @@ skip_files:
 
 handlers:
 
-- url: /(.*\.css)
+  # All files that can be compiled in angular. Luckily, they all have suffixes.
+- url: /(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
   static_files: dist/client/\1
-  upload: dist/client/(.*\.css)
-  
-- url: /(.*\.html)
-  static_files: dist/client/\1
-  upload: dist/client/(.*\.html)
+  upload: dist/client/(.*\.(css|eot|gz|html|ico|js|map|png|svg|ttf|woff|woff2))
 
-# Site root.
-- url: /
-  static_files: dist/client/index.html
-  upload: dist/client/index.html
-
-# Catch-all rule, responsible from handling Angular application routes (deeplinks).
+# Site root, plus anything else, like deep urls
+# Make this be secure, otherwise oauth redirect won't work if they want to us with http://
 - url: /.*
   static_files: dist/client/index.html
   upload: dist/client/index.html
+  secure: always
+  expiration: "15m"

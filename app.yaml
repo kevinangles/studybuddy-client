@@ -3,8 +3,8 @@ api_version: 1
 threadsafe: true
 handlers:  
 - url: /(.*\.(gif|png|jpg|svg|ico|css|js)(|\.map))$
-  static_files: client/\1
-  upload: client/(.*)(|\.map)
+  static_files: /\1
+  upload: /(.*)(|\.map)
 - url: /(.*)
-  static_files: client/index.html
-  upload: client/index.html
+  static_files: /index.html
+  upload: /index.html

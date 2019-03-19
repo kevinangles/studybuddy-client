@@ -2,6 +2,9 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+skip_files:
+- ^(?!dist)
+
 handlers:
 
 - url: /(.*\.css)
@@ -12,8 +15,6 @@ handlers:
   static_files: dist/client/\1
   upload: dist/client/(.*\.html)
 
-...
-
 # Site root.
 - url: /
   static_files: dist/client/index.html
@@ -23,6 +24,3 @@ handlers:
 - url: /.*
   static_files: dist/client/index.html
   upload: dist/client/index.html
-
-skip_files:
-- ^(?!dist)

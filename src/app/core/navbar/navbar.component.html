@@ -12,16 +12,20 @@
   <div class="collapse navbar-collapse" id="navbar-dropdown">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/search"
-          *ngIf="coreService.isAuthenticated">Search</a>
-      </li>
-      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
         <a class="nav-link" routerLink="/register"
           *ngIf="!coreService.isAuthenticated">Register</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
         <a class="nav-link" routerLink="/login"
           *ngIf="!coreService.isAuthenticated">Login</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/search"
+          *ngIf="coreService.isAuthenticated">Search</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
+        <a class="nav-link" routerLink="/connections"
+          *ngIf="coreService.isAuthenticated">Connections</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
         <a class="nav-link" routerLink="/login"

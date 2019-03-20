@@ -40,11 +40,16 @@ export class ResultsComponent implements OnInit {
     });
   }
 
+  // Returns an array with professors who have students in their courses
   getProfessorNames(courses: any[]) {
     let names: string[] = [];
     let uniqueNames: string[] = [];
 
-    names = courses.map(course => course.professor.name);
+    for (let course of courses) {
+      if (course.students.length) {
+        names.push(course.professor.name);
+      }
+    }
 
     uniqueNames = names.filter((item, i, array) => {
       return array.indexOf(item) === i;

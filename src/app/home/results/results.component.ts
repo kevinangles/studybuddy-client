@@ -36,6 +36,7 @@ export class ResultsComponent implements OnInit {
       this.professors = this.getProfessorNames(this.courses);
       this.references = this.getReferences(this.courses);
       this.resultCount = this.getResultCount(this.filteredCourses);
+      this.randomizeResults(this.filteredCourses);
     });
   }
 
@@ -103,5 +104,12 @@ export class ResultsComponent implements OnInit {
     });
 
     return count;
+  }
+
+  randomizeResults(filteredCourses: any[]) {
+    for (let i = filteredCourses.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [filteredCourses[i], filteredCourses[j]] = [filteredCourses[j], filteredCourses[i]];
+    }
   }
 }

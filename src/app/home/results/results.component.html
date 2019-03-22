@@ -62,7 +62,7 @@
       <div *ngFor="let course of filteredCourses">
         <div class="media" *ngFor="let student of course.students" data-toggle="modal" data-target="#profile-modal"
           (click)="profile = student; selectedCourse = course">
-          <img class="profile-picture" src="../../../assets/img/profile-picture.svg">
+          <img class="profile-picture" [src]="student.picture">
           <div class="media-body">
             <div class="user-name">
               {{ student.first_name }} {{student.last_name }}

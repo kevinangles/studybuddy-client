@@ -3,6 +3,7 @@ import { HomeService } from '../home.service';
 import { ActivatedRoute } from '@angular/router';
 import * as $ from 'jquery';
 import { ICourse } from './course';
+import { IStudent } from './student';
 
 @Component({
   selector: 'app-results',
@@ -16,6 +17,7 @@ export class ResultsComponent implements OnInit {
   professors: string[] = [];
   references: string[] = [];
   query: string;
+  profile: IStudent;
   resultCount: number;
 
   constructor(private homeService: HomeService, private route: ActivatedRoute) {

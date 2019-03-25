@@ -7,7 +7,7 @@ $light-gray: #9da3ac;
   color: $primary-color;
   font-size: 36px;
   font-weight: 500;
-  justify-content: center;
+  text-align: center;
   margin-bottom: 28px;
 }
 
@@ -36,14 +36,14 @@ $light-gray: #9da3ac;
   .logo {
     color: $primary-color;
     font-weight: bold;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 35px;
     font-size: 13vmin;
   }
 
   .buttons {
     margin-top: 15px;
-    justify-content: center;
+    text-align: center;
   }
 
   .register-button {
@@ -76,13 +76,15 @@ $light-gray: #9da3ac;
 .how-to {
   margin-top: 20px;
   margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-
+  
   .step-image {
     height: 75px;
     margin-top: 30px;
     margin-bottom: 30px;
-    justify-content: center;
+    text-align: center;
   }
 
   .step-title {
@@ -90,14 +92,14 @@ $light-gray: #9da3ac;
     font-size: 22px;
     font-weight: 500;
     margin-top: 15px;
-    justify-content: center;
+    text-align: center;
   }
 
   .step-description {
     color: $light-gray;
     font-size: 18px;
     margin-bottom: 50px;
-    justify-content: center;
+    text-align: center;
   }
 }
 

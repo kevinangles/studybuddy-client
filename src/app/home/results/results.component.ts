@@ -30,7 +30,7 @@ export class ResultsComponent implements OnInit {
       this.getProfessorNames(this.courses);
       this.getReferences(this.courses);
       this.getResultCount(this.courses);
-      this.randomizeResults(this.courses);
+      this.randomizeResults(this.filteredCourses);
     });
   }
 

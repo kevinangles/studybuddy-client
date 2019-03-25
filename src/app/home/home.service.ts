@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class HomeService {
   path = environment.path;
+  navTitle = 'Studybuddy';
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -20,5 +21,14 @@ export class HomeService {
 
   searchByCode(code: string): Observable<any> {
     return this.http.get(this.path + '/search/' + code);
+  }
+
+  getNavTitle() {
+    let title = this.navTitle;
+    return title;
+  } 
+
+  setNavTitle(title) {
+    this.navTitle = title;
   }
 }

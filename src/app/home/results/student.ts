@@ -1,0 +1,9 @@
+export interface IStudent {
+  uuid: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  phone_number: string;
+  details: string;
+  picture: string;
+}

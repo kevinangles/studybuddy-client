@@ -4,7 +4,7 @@ $medium-gray: #767e8a;
 $light-gray: #9da3ac;
 
 .wrapper {
-  max-width: 600px;
+  max-width: 500px;
   margin-right: auto;
   margin-bottom: 50px;
   margin-left: auto;
@@ -139,6 +139,7 @@ hr {
 
   img {
     height: 75px;
+    border-radius: 50%;
   }
 }
 

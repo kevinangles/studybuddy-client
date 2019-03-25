@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="wrapper">
-    <div class="title"> {{ courseName }} </div>
+    <div class="title"> {{ course.name }} </div>
     <div class="option-container">
       <!-- Filter button -->
       <button class="btn btn-sm option-button" type="button" data-toggle="collapse" data-target="#filter"
@@ -61,7 +61,7 @@
     <div>
       <div *ngFor="let course of filteredCourses">
         <div class="media" *ngFor="let student of course.students" data-toggle="modal" data-target="#profile-modal"
-          (click)="profile = student; selectedCourse = course">
+          (click)="profile = student;">
           <img class="profile-picture" [src]="student.picture">
           <div class="media-body">
             <div class="user-name">
@@ -75,10 +75,9 @@
       </div>
       <div class="no-results" *ngIf="!resultCount">
         <div class="frown-icon"><i class="far fa-frown-open fa-5x"></i></div>
-        <div class="no-results-title">No results for <span>{{ courseCode }}</span></div>
-        <div><a href="#">Get notified</a> when students are available</div>
+        <div class="no-results-title">No results for <span>{{ course.code }}.</span></div>
+        <div><a href="#">Get notified</a> when students are available.</div>
       </div>
-
     </div>
 
     <!-- Modal -->
@@ -88,7 +87,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              {{courseCode}} - {{courseName}}
+              {{ course.code }} - {{ course.name }}
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -96,10 +95,10 @@
           </div>
           <div class="modal-body">
             <div class="modal-profile-picture">
-              <img src="../../../assets/img/profile-picture.svg">
+              <img [src]="profile?.picture || ''">
             </div>
             <div class="modal-name">
-              {{profile?.first_name}} {{profile?.last_name}}
+              {{ profile?.first_name }} {{ profile?.last_name }}
             </div>
             <!-- <div class="modal-rating">
               <i class="fas fa-star"></i>
@@ -110,7 +109,7 @@
             </div> -->
             <div class="modal-details">
               <div class="modal-details-title">Availability</div>
-              <div>{{profile?.details}}</div>
+              <div>{{ profile?.details }}</div>
             </div>
           </div>
           <div class="modal-footer">

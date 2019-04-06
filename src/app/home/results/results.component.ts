@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../home.service';
 import { ActivatedRoute } from '@angular/router';
-import * as $ from 'jquery';
 import { ICourse } from './course';
 import { IStudent } from './student';
 
@@ -66,8 +65,9 @@ export class ResultsComponent implements OnInit {
   // or unfilter courses when a checkbox is unchecked
   filterByProfessor(professor: string) {
     this.query = '';
+    const checkBox = document.getElementById(professor) as HTMLInputElement;
 
-    if ($(`input:checkbox[name='${professor}']`).is(":checked")) {
+    if (checkBox.checked) {
       // Get courses with the professor name that matches the checked professor name
       this.filteredCourses = this.courses.filter((course) => course.professor.name === professor);
 
@@ -86,8 +86,9 @@ export class ResultsComponent implements OnInit {
   // or unfilter courses when a checkbox is unchecked
   filterByReference(reference: string) {
     this.query = '';
+    const checkBox = document.getElementById(reference) as HTMLInputElement;
 
-    if ($(`input:checkbox[name='${reference}']`).is(":checked")) {
+    if (checkBox.checked) {
       // Get courses with the reference number that matches the checked reference number
       this.filteredCourses = this.courses.filter((course) => course.reference === reference);
 

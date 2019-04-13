@@ -59,9 +59,8 @@
               <input type="password" formControlName="password" class="form-control" placeholder="Password"
                 tabindex="4">
               <small *ngIf="password.invalid && password.touched" class="form-text error-message">Password must contain
-                a
-                minimum of eight characters, including at least one uppercase letter, one lowercase letter,
-                one number and one special character</small>
+                a minimum of eight characters, including at least one uppercase letter, one lowercase letter, one number
+                and one special character</small>
               <small *ngIf="password.hasError('maxlength') && password.touched" class="form-text error-message">Password
                 must be 32 characters or less</small>
             </div>
@@ -77,9 +76,9 @@
                 class="form-text error-message">Phone number
                 is
                 required</small>
-              <small *ngIf="phone_number.hasError('maxlength') && phone_number.touched"
+              <small *ngIf="phone_number.hasError('maxlength') || phone_number.hasError('minlength') && phone_number.touched"
                 class="form-text error-message">Phone number
-                must be 10 numbers or less</small>
+                must be contain 10 digits</small>
             </div>
             <!-- Reference number textbox -->
             <!-- <div class="form-group reference-form" formArrayName="references">

@@ -5,23 +5,17 @@ $light-gray: #9da3ac;
 
 .navbar-custom {
   min-height: 50px;
+}
 
-  .brand-container {
-    position: absolute; 
-    top: 9px;
-    z-index: -1;
-    width: 100%;
-    left: 0px; 
-    text-align: center;
-  }
-
-  .navbar-brand {
-    font-size: 22px;
-    color: $primary-color;
-    font-weight: 600;
-    margin-right: 0px;
-    padding: 0px;
-  }
+.navbar-brand, .navbar-brand:hover, 
+.navbar-brand:active, .navbar-brand:visited {
+  font-size: 22px;
+  color: $primary-color;
+  font-weight: 600;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: -54px;
 }
 
 .nav-link {
@@ -45,17 +39,9 @@ li:first-child a {
 }
 
 .navbar-toggler {
-  border-color: white;
   padding-top: 2px;
   padding-bottom: 2px;
-}
-
-.logout-button {
-  font-weight: 600;
-}
-
-.logout-button:hover {
-  color: $primary-color;
+  border: none;
 }
 
 @media (min-width: 992px) {

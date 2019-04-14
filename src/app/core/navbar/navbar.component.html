@@ -3,38 +3,34 @@
     aria-expanded="false">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="brand-container brand-mobile">
-    <a [routerLink]="['/welcome']" class="navbar-brand"> {{ title }} </a>
+  <div class="brand-mobile">
+    <a class="navbar-brand"> {{ title }} </a>
   </div>
-  <div class="brand-container brand-desktop">
-    <a [routerLink]="['/welcome']" class="navbar-brand"> Studybuddy </a>
+  <div class="brand-desktop">
+    <a [routerLink]="['/search']" class="navbar-brand"> Studybuddy </a>
+  </div>
+  <div>
   </div>
   <div class="collapse navbar-collapse" id="navbar-dropdown">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/register"
-          *ngIf="!coreService.isAuthenticated">Register</a>
+        <a class="nav-link" routerLink="/register" *ngIf="!coreService.isAuthenticated">Register</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/login"
-          *ngIf="!coreService.isAuthenticated">Login</a>
+        <a class="nav-link" routerLink="/login" *ngIf="!coreService.isAuthenticated">Login</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/search"
-          *ngIf="coreService.isAuthenticated">Search</a>
+        <a class="nav-link" routerLink="/search" *ngIf="coreService.isAuthenticated">Search</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/connections"
-          *ngIf="coreService.isAuthenticated">Connections</a>
+        <a class="nav-link" routerLink="/connections" *ngIf="coreService.isAuthenticated">Connections</a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target="#navbar-dropdown">
-        <a class="nav-link" routerLink="/login"
-          *ngIf="coreService.isAuthenticated">Account</a>
+        <a class="nav-link" routerLink="/login" *ngIf="coreService.isAuthenticated">Account</a>
       </li>
       <div *ngIf="coreService.isAuthenticated" data-toggle="collapse" data-target="#navbar-dropdown">
         <div class="dropdown-divider"></div>
-        <a class="nav-link" (click)="coreService.logout()"
-          routerLink="/login">Log out</a>
+        <a class="nav-link" (click)="coreService.logout()" routerLink="/welcome">Log out</a>
       </div>
     </ul>
   </div>
